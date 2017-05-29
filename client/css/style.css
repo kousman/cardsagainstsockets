@@ -94,7 +94,7 @@ div.cardsPlayed {
 }
 
 div.scoreboard {
-	width: 40%;
+    width: 40%;
     height: 200px;
     top: 67%;
     position: absolute;

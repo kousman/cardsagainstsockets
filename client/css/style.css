@@ -3,7 +3,7 @@ body {
 	background: #333;
 	min-height: 100%;
 	font-family: Roboto;
-	overflow-y: hidden;
+	overflow: hidden;
 }
 
 #startRndBtn {
@@ -66,11 +66,12 @@ div#alertBox {
 	position: absolute;
 	bottom: -50px;
 	background: #37F;
-	left: 0px;	
-    text-align: center;
-    line-height: 50px;
-    font-size: 25px;
-    color: white;
+	left: 0px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 25px;
+  color: white;
+	z-index: 11;
 }
 
 div#timeLeftTimer {
@@ -100,4 +101,49 @@ div.scoreboard {
     position: absolute;
     background: black;
     color: white;
+}
+
+div#cover {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: #333;
+	z-index: 10;
+}
+
+div#serverIpContainer {
+	width: 250px;
+	position: absolute;
+	left: 50%;
+	height: 50px;
+	line-height: 24px;
+	text-align: center;
+	top: 50%;
+	margin: -25px 0px 0px -125px;
+}
+
+input#serverIp {
+}
+
+input#serverIpButton {
+	font-size: 20px;
+	color: white;
+	border: none;
+	background: #606060;
+	width: 150px;
+	margin-top: 10px;
+}
+
+p#serverIpNote {
+	margin: 0px;
+	color: white;
+	font-size: 13px;
+}
+
+input.inputBeg {
+	border: none;
+  color: #333;
+  font-size: 20px;
+  width: 250px;
+	text-align: center;
 }

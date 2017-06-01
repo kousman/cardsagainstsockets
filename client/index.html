@@ -5,20 +5,30 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Page</title>
-        <link rel="stylesheet" href="css/style.css">
         <link rel="author" href="humans.txt">
+        <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+        <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/socket.io.js"></script>
         <script src="js/main.js"></script>
+        <script>if (window.module) module = window.module;</script>
     </head>
     <body>
-        <div id="playerInfo">           
+        <div id="playerInfo">
         </div>
         <div id="startRndBtn">
-        Start Round    
+        Start Round
         </div>
         <div id="timeLeftTimer"></div>
         <div id="alertBox"></div>
+        <div id="cover">
+          <div id="serverIpContainer">
+            <input id="serverIp" class="inputBeg" type="text" placeholder="Enter the Server IP"></input>
+            <p id="serverIpNote">Note: The default IP is localhost</p>
+            <input id="usernameIn" class="inputBeg" type="text" placeholder="Enter your username"></input>
+            <input id="serverIpButton" type="button" value="Connect!"></input>
+          </div>
+        </div>
     </body>
 </html>

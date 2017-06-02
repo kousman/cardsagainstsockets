@@ -176,12 +176,17 @@ function startRoundTimer()
 {
 	timer = 10;
 	roundTimer = setInterval(function() {
-		if(timer <= 0) {
+		if(timer <= 0 && cardsPlayedRound.length > 0) {
 			clearInterval(roundTimer);
 			sendPlayedCards();
 			startCzarTimer();
 		} else if(playerList.length == 0) {
 			clearInterval(roundTimer);
+		} else if(timer <= 0 && cardsPlayedRound.length == 0) {
+			clearInterval(roundTimer);
+			for(var i = 0; i < playerList.length; i++) {
+				playerList[i][1].socketInfo.emit('noCardsPlayed', {});
+			}
 		}
 		for(var i = 0; i < playerList.length; i++) {
 			playerList[i][1].socketInfo.emit('timeLeft', {time: timer});

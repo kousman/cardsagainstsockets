@@ -36,7 +36,7 @@ $(function() {
 		});
 
 		socket.emit('getUsername', {user: $('#usernameIn').val()});
-		
+
 		socket.on('connect_error', function() {
 			showAlert("Can't conect to Server, check that IP!");
 			socket.disconnect();
@@ -146,6 +146,10 @@ $(function() {
 				animateCard();
 			}
 		});
+
+		socket.on('noCardsPlayed', function() {
+			showAlert("No cards have been played!");
+		})
 
 		socket.on('currentScoreboard', function(data) {
 			$('.scoreboard').empty();

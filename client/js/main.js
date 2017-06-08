@@ -17,9 +17,9 @@ $(function() {
 
 	function connectToServer(ip) {
 		if(ip == "") {
-			socket = io.connect('http://localhost:8000');
+			socket = io.connect('http://localhost:1337');
 		} else {
-			var ipT = 'http://' + ip + ':8000';
+			var ipT = 'http://' + ip + ':1337';
 			socket = io.connect(ipT);
 		}
 

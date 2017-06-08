@@ -5,7 +5,7 @@ console.log("Hello");
 		-
 	**/
 var io = require('socket.io'),
-	server = io.listen(8000),
+	server = io.listen(1337),
 	playerList = [],
 	playerNumber = 0,
 	maxPlayers = 5,
